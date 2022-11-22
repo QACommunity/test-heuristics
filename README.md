@@ -64,3 +64,43 @@ A collection of test heuristics
 - Locked
 - On remote machine
 - Corrupted
+
+## Web
+
+### Navigation
+
+- Back (watch for ‘Expired’ messages and double-posted transactions)
+- Refresh
+- Bookmark the URL
+- Select Bookmark when Logged Out
+- Hack the URL (change/remove parameters; see also Data Type Attacks)
+- Multiple Browser Instances Open
+- Swipe/Tap/Pinch
+
+### Input
+
+- See also "Data types"
+- HTML/JavaScript Injection (allowing the user to enter arbitrary HTML tags and JavaScript commands can lead to security vulnerabilities)
+- Check Max Length Defined on Text Inputs
+- > 5000 Chars in TextAreas
+
+### Syntax
+
+- HTML syntax checker 
+- CSS syntax checker
+
+### Configuration (preferences)
+
+- Javascript Off
+- Cookies Off
+- Security High
+- Resize Browser Window
+- Change Font Size
+
+### Accessibility (A11y)
+
+- Keyboard: Navigation; Skip to link (first tab); No traps (menus / subsections); visible focus indicator; use all functionality; pop ups have focus, can be dismissed
+- Context: Links (descriptive) ; Alt-text (descriptive or decorative is hidden); Form input labels; Main elements (only one) Country and language defined; plain language used;
+- Content: Capitals in #; No all capitals text; No justified text; Zoom to 200%; Gender neutral; acronyms explained; clear instructions; Good contrast; More than just colour to indicate success e.g. green tick;
+
+
