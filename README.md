@@ -4,6 +4,24 @@ A collection of test heuristics
 
 ## Data Type Attacks
 
+### Numbers
+
+- 0
+- 32768 (215)
+- 32769 (215 + 1)
+- 65536 (216)
+- 65537 (216 + 1)
+- 2147483648 (231)
+- 2147483649 (231 + 1)
+- 4294967296 (232)
+- 4294967297 (232 + 1)
+- Scientific notation (1E-16)
+- Negative
+- Floating point (decimals) (0.0001)
+- Comma separator (1,234,567)
+- Dot separator (1.234.567,89)
+- Space separator (1 234 567.89)
+
 ### Time and date
 
 - Timeouts
