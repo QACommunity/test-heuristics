@@ -4,6 +4,21 @@ A collection of test heuristics
 
 ## Data Type Attacks
 
+### Strings
+
+- Long (255, 256, 257, 1000, 1024, 2000, 2048 or more characters)
+- Accented Chars (àáâãäåçèéêëìíîðñòôõöö)
+- Asian charcters
+- Common Delimiters and Special Characters ( “ ‘ \` | / \ , ; : & < > ^ * ? Tab )
+- Leave Blank
+- Single Space
+- Multiple Spaces
+- Leading Spaces
+- End-of-Line Characters (^M)
+- SQL Injection ( ‘select * from customer )
+- With All Actions (Entering, Searching, Updating, etc.)
+- Emojis
+
 ### Numbers
 
 - 0
