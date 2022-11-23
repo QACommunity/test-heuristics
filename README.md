@@ -82,7 +82,7 @@ A collection of test heuristics
 - See also "Data types"
 - HTML/JavaScript Injection (allowing the user to enter arbitrary HTML tags and JavaScript commands can lead to security vulnerabilities)
 - Check Max Length Defined on Text Inputs
-- > 5000 Chars in TextAreas
+- \> 5000 Chars in TextAreas
 
 ### Syntax
 
@@ -99,8 +99,83 @@ A collection of test heuristics
 
 ### Accessibility (A11y)
 
-- Keyboard: Navigation; Skip to link (first tab); No traps (menus / subsections); visible focus indicator; use all functionality; pop ups have focus, can be dismissed
-- Context: Links (descriptive) ; Alt-text (descriptive or decorative is hidden); Form input labels; Main elements (only one) Country and language defined; plain language used;
-- Content: Capitals in #; No all capitals text; No justified text; Zoom to 200%; Gender neutral; acronyms explained; clear instructions; Good contrast; More than just colour to indicate success e.g. green tick;
+- Document structure
+- Keyboard navigation
+- Valid links URL
+- Alt-text
+- Form input labels
+- Language
+- No all-capitals text
+- Contrast
+- Text labels for feedback massages (not just colors)
+- Acronyms explained
 
+## API
+
+### CRUD
+
+- C: Create
+- R: Read
+- U: Update
+- D: Delete
+
+### BINMEN
+
+- B: Boundary
+- I: Invalid Entries
+- N: NULL
+- M: Method
+- E: Empty
+- N: Negative
+
+### POISED
+
+- P: Parameters
+- O: Output
+- I: Interop
+- S: Security
+- E: Errors
+- D: Data
+
+### VADER
+
+- V: Verbs
+- A: Authorisation/Authentication
+- D: Data
+- E: Errors
+- R: Responsiveness
+
+## Mobile / Tablet / Other
+
+### Mobile
+
+- Mobile Device
+- Orientation
+- Mobile Browsers
+- Interrupts
+- Look
+- Energy Consumption
+- Automation
+- Performance
+- Personas
+- Time & Date
+- Ergonomics
+- Security
+- Tracking
+- Inputs
+- Network
+- Platform Guidelines
+
+## Heuristics
+
+### Interruptions
+
+- Log Off
+- Shut Down
+- Reboot
+- Kill Process
+- Disconnect
+- Hibernate
+- Timeout
+- Cancel
 
