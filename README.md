@@ -2,7 +2,7 @@
 
 > A collection of test heuristics
 
-## Data Type Attacks
+## Data Types
 
 ### Strings
 
