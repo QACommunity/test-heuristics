@@ -1,0 +1,215 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Test Heuristics</title>
+	<link rel="stylesheet" href="reset.min.css">
+	<link rel="stylesheet" href="properties.min.css">
+	<link rel="stylesheet" href="layout.min.css">
+	<link rel="stylesheet" href="grid.min.css">
+	<style>
+		section {
+			margin-bottom: 2rem;
+		}
+		h3 {
+			margin-bottom: 0.5rem;
+		}
+		progress {
+			margin-bottom: 0.5rem;
+		}
+	</style>
+	<script src="script.js" defer></script>
+</head>
+<body>
+
+<main>
+	<h1>Test Heuristics</h1>
+
+	<blockquote><p>A collection of test heuristics</p></blockquote>
+
+	<h2>Input values</h2>
+
+	<section>
+		<h3>🧵 Strings</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> Minimun and maximum length <code>0</code>, <code>255+1</code>, <code>65535+1</code></li>
+			<li><input type="checkbox"> Non ASCII (american) characters (<code>ǼḂČÇƊ</code>, <code>象形字</code>, <code>اَلْعَرَبِيَّةُ</code>...)</li>
+			<li><input type="checkbox"> Invisible characters (space, tab, break, etc.)</li>
+			<li><input type="checkbox"> Delimiters (<code>“ ‘ \| / \ , ; : &amp; &lt; &gt; ^ * ? Tab</code>)</li>
+			<li><input type="checkbox"> Special characters (<code>~!@#$%^&amp;*+-=</code>)</li>
+			<li><input type="checkbox"> Emojis (😄🎉🎁✨)</li>
+			<li><input type="checkbox"> Empty, null</li>
+			<li><input type="checkbox"> HTML tags</li>
+			<li><input type="checkbox"> JS code</li>
+			<li><input type="checkbox"> SQL injection (<code>&#39; OR &#39;1&#39;=&#39;1&#39;; drop table users;</code>)</li>
+			<li><input type="checkbox"> Non text (numbers, binary, blobs)</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>🎰 Numbers</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> Minimun and maximum values <code>-1</code>, <code>0</code>, <code>255+1</code>, <code>65535+1</code></li>
+			<li><input type="checkbox"> Types (<code>decimal</code>, <code>binary</code>, <code>hexadecimal</code>, <code>octal</code>)</li>
+			<li><input type="checkbox"> Scientific notation (<code>1E-9</code>, <code>10<sup>-9</sup></code>)</li>
+			<li><input type="checkbox"> Separators (comma, dot, space, semicolon)</li>
+			<li><input type="checkbox"> Operations (devide by zero, sum negative numbers, etc.)</li>
+			<li><input type="checkbox"> Non number (text, symbols)</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>📅 Time and date</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> Date/time in the future</li>
+			<li><input type="checkbox"> Date/time in the past</li>
+			<li><input type="checkbox"> Time difference between machines</li>
+			<li><input type="checkbox"> Crossing time zones</li>
+			<li><input type="checkbox"> Daylight savings changes</li>
+			<li><input type="checkbox"> Leap days</li>
+			<li><input type="checkbox"> Invalid days (<code>Feb 30</code>, <code>Sept 31</code>)</li>
+			<li><input type="checkbox"> Feb 29 in non-leap years</li>
+			<li><input type="checkbox"> Internationalization (<code>mmmm dd, yyyy</code>, <code>yyyy/mm/dd</code>, <code>dd.mm.yyyy</code>, <code>mm/dd/yyyy</code>)</li>
+			<li><input type="checkbox"> Delimiters (comma, dot, slash, dash, colon)</li>
+			<li><input type="checkbox"> Clock format (AM/PM, 24 hours)</li>
+			<li><input type="checkbox"> Reset clock backward or forward</li>
+		</ul>
+	</section>
+
+	<h2>Web</h2>
+
+	<section>
+		<h3>🕹 Navigation</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> Back/Forward button (watch for expired messages and double-posted transactions)</li>
+			<li><input type="checkbox"> Refresh</li>
+			<li><input type="checkbox"> Bookmark the URL</li>
+			<li><input type="checkbox"> Select bookmark when logged Out</li>
+			<li><input type="checkbox"> Modify URL parameters</li>
+			<li><input type="checkbox"> Access from multiple devices simultaneously</li>
+			<li><input type="checkbox"> Gestures (swipe, tap, pinch, hold, drag)</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>📱 Device management</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> Javascript Off</li>
+			<li><input type="checkbox"> Cookies Off</li>
+			<li><input type="checkbox"> Security high</li>
+			<li><input type="checkbox"> Resize browser window</li>
+			<li><input type="checkbox"> Change font size</li>
+			<li><input type="checkbox"> Change zoom value</li>
+			<li><input type="checkbox"> Activate ad/tracker blocker</li>
+			<li><input type="checkbox"> Orientation</li>
+			<li><input type="checkbox"> Performance</li>
+			<li><input type="checkbox"> Network speed</li>
+			<li><input type="checkbox"> Energy consumption</li>
+			<li><input type="checkbox"> Log off</li>
+			<li><input type="checkbox"> Shut down</li>
+			<li><input type="checkbox"> Reboot</li>
+			<li><input type="checkbox"> Kill process</li>
+			<li><input type="checkbox"> Disconnect</li>
+			<li><input type="checkbox"> Hibernate</li>
+			<li><input type="checkbox"> Timeout</li>
+			<li><input type="checkbox"> Cancel</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>♿️ Accessibility (A11y)</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> Document structure</li>
+			<li><input type="checkbox"> Keyboard navigation</li>
+			<li><input type="checkbox"> Valid links URL</li>
+			<li><input type="checkbox"> Image alt text</li>
+			<li><input type="checkbox"> Form input labels</li>
+			<li><input type="checkbox"> Language definition</li>
+			<li><input type="checkbox"> No all-capitals text</li>
+			<li><input type="checkbox"> Color contrast</li>
+			<li><input type="checkbox"> Error messages have human-readable description</li>
+			<li><input type="checkbox"> Abbreviations have human-readable description</li>
+		</ul>
+	</section>
+
+	<h2>API transactions</h2>
+
+	<section>
+		<h3>🤖 CRUD</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> <code>C</code>: Create</li>
+			<li><input type="checkbox"> <code>R</code>: Read</li>
+			<li><input type="checkbox"> <code>U</code>: Update</li>
+			<li><input type="checkbox"> <code>D</code>: Delete</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>🤖 BINMEN</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> <code>B</code>: Boundary</li>
+			<li><input type="checkbox"> <code>I</code>: Invalid Entries</li>
+			<li><input type="checkbox"> <code>N</code>: NULL</li>
+			<li><input type="checkbox"> <code>M</code>: Method</li>
+			<li><input type="checkbox"> <code>E</code>: Empty</li>
+			<li><input type="checkbox"> <code>N</code>: Negative</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>🤖 POISED</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> <code>P</code>: Parameters</li>
+			<li><input type="checkbox"> <code>O</code>: Output</li>
+			<li><input type="checkbox"> <code>I</code>: Interoperability</li>
+			<li><input type="checkbox"> <code>S</code>: Security</li>
+			<li><input type="checkbox"> <code>E</code>: Errors</li>
+			<li><input type="checkbox"> <code>D</code>: Data</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>🤖 VADER</h3>
+		<progress max="100" value="0">
+			<span data-id="progress-value">0</span>% Completed
+		</progress>
+		<ul class="list-unstyled">
+			<li><input type="checkbox"> <code>V</code>: Verbs</li>
+			<li><input type="checkbox"> <code>A</code>: Authentication/Authorization</li>
+			<li><input type="checkbox"> <code>D</code>: Data</li>
+			<li><input type="checkbox"> <code>E</code>: Errors</li>
+			<li><input type="checkbox"> <code>R</code>: Responsiveness</li>
+		</ul>
+	</section>
+</main>
+
+</body>
+</html>
